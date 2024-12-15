@@ -1,0 +1,15 @@
+$navbar-height: 60px;
+$logo-height: 100px;
+
+.custom-navbar {
+  height: $navbar-height;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  .navbar-brand {
+    img {
+      height: $logo-height;
+      width: auto;
+    }
+  }
+}
