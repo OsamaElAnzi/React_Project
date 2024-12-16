@@ -7,6 +7,7 @@ import FooterCom from "./componenten/Pages/FooterCom";
 import logo from "./componenten/Img/osama.png";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Projecten from "./componenten/Pages/Projecten";
 
 const App = () => {
     const particlesInit = useCallback(async (engine) => {
@@ -48,7 +49,7 @@ const App = () => {
                                 quantity: 4,
                             },
                             repulse: {
-                                distance: 200,
+                                distance: 150,
                                 duration: 0.4,
                             },
                         },
@@ -77,7 +78,7 @@ const App = () => {
                         number: {
                             density: {
                                 enable: true,
-                                area: 800,
+                                area: 500,
                             },
                             value: 80,
                         },
@@ -97,7 +98,7 @@ const App = () => {
 
             <Navigation />
             <div className="content-container d-flex flex-row">
-                <Home />
+                <Projecten />
                 <img src={logo} alt="Osama Logo" className="logo-img" />
             </div>
             <FooterCom />
