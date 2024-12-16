@@ -26,3 +26,10 @@
 .bg-body-gray {
     background-color: rgb(77, 77, 77);
 }
+
+.orbitron {
+  font-family: "Orbitron", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}

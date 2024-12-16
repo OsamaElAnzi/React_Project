@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react'
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
-
 function PackageBg() {
     const particlesInit = useCallback(async (engine) => {
         console.log(engine);

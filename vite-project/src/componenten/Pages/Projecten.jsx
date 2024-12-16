@@ -4,6 +4,8 @@ import github from "../Img/github-mark.png";
 import money from "../Img/profits.png";
 import roc from "../Img/roc.png";
 import pinguin from "../Img/pinguin.png";
+import logo from "../Img/osama.png";
+
 
 const projectData = [
   {
@@ -42,17 +44,17 @@ const Projecten = () => {
         <Row key={rowIndex} className="mb-4">
           {row.map((project) => (
             <Col md={4} key={project.id}>
-              <Card className="h-100">
+              <Card className="h-100 bg-dark text-success">
                 <Card.Img variant="top" src={project.imgSrc} />
-                <Card.Body className="d-flex flex-column justify-content-between">
+                <Card.Body className="d-flex flex-column justify-content-between ">
                   <Col>
                     <Card.Title>{project.title}</Card.Title>
                     <Card.Text>{project.text}</Card.Text>
                   </Col>
                   <Row>
                     <Col>
-                      <a href={project.githublink}>
-                        <img width={40} src={github} />
+                      <a href={project.githublink} >
+                        <img width={40} src={github} className="bg-white rounded-circle border-primary" />
                       </a>
                     </Col>
                     <Col></Col>

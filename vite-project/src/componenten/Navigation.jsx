@@ -1,28 +1,41 @@
-import React from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import React from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import CV from "../componenten/CV/CVvanOsamaElAnzi.pdf";
 
 function Navigation() {
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#projecten", label: "Projecten" },
-    { href: "#educatie", label: "Educatie" }
+    { to: "/", label: "Home" },
+    { to: "/projecten", label: "Projecten" },
   ];
 
   return (
-    <>
-      <Navbar className="bg-body-gray" expand="lg">
+    <header>
+      <Navbar bg="dark" expand="lg" className="shadow-sm">
         <Container>
-          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Toggle
+            aria-controls="navbarScroll"
+            aria-label="Toggle navigation menu"
+          />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto">
               {navLinks.map((link) => (
-                <Nav.Link key={link.href} href={link.href} aria-label={`Navigate to ${link.label}`}>
+                <Nav.Link
+                 className="text-white"
+                  key={`${link.to}-${link.label}`}
+                  as={Link}
+                  to={link.to}
+                  aria-label={`Navigate to ${link.label}`}
+                >
                   {link.label}
                 </Nav.Link>
               ))}
+              <Nav.Link className="text-white" href={CV} target="_blank">
+                CV
+              </Nav.Link>
             </Nav>
-            <Navbar.Text>
-              Gemaakt door:
+            <Navbar.Text className="text-white">
+              Gemaakt door:&nbsp;
               <a
                 href="https://www.linkedin.com/in/osama-el-anzi-930207268/"
                 target="_blank"
@@ -35,7 +48,7 @@ function Navigation() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
+    </header>
   );
 }
 
