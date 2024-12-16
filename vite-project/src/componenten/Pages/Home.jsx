@@ -1,13 +1,13 @@
 import React from "react";
-import { Container, Col, Row, Card } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 function Home() {
   return (
     <>
-      <Container className="">
-        <Row>
+      <Container className="pt-5">
+        <Row className="pt-5">
           <Col className="d-flex justify-content-center flex-column align-items-center">
-            <h1>Hi, Ik ben Osama ;)</h1>
-            <p>
+            <p className="display-1">Hi, Ik ben Osama ;)</p>
+            <p className="display-6 w-50 d-flex text-center">
               Een junior softwareontwikkelaar die helpt met het bouwen en
               verbeteren van applicaties, leert nieuwe technieken
             </p>
