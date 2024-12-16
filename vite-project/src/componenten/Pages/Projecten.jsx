@@ -54,7 +54,7 @@ function Projecten() {
                 src="https://via.placeholder.com/1200X200"
               />
               <Card.Body>
-                <Card.Title>Project 1</Card.Title>
+                <Card.Title>Project Pinhu</Card.Title>
                 <Card.Text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                   consectetur, ex non consectetur porttitor, velit neque

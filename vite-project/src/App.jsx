@@ -99,9 +99,10 @@ const App = () => {
             <Navigation />
             <div className="content-container d-flex flex-row">
                 <Projecten />
-                <img src={logo} alt="Osama Logo" className="logo-img" />
+                <div className="col ">
+                    <img src={logo} alt="Osama Logo" className="logo-img" />
+                </div>
             </div>
-            <FooterCom />
         </div>
     );
 };
