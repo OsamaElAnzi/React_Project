@@ -4,14 +4,13 @@ import github from "../Img/github-mark.png";
 import money from "../Img/profits.png";
 import roc from "../Img/roc.png";
 import pinguin from "../Img/pinguin.png";
-import logo from "../Img/osama.png";
-
+import info from "../Img/info.png";
+import { Link } from "react-router-dom";
 
 const projectData = [
   {
     id: 1,
     title: "Vrijstellingsaanvraag Systeem - ROC Midden Nederland",
-    text: "De profielpagina biedt studenten de mogelijkheid om inzicht te krijgen in hun eigen ontwikkeling en voortgang door middel van een overzicht van hun prestaties en behaalde resultaten. Dit stelt hen in staat om actief hun groeipad te volgen en gerichte stappen te zetten om verder te ontwikkelen. Door deze transparantie kunnen studenten beter reflecteren op hun sterke punten en verbeterpunten, en krijgen ze meer regie over hun persoonlijke leerproces. Het geeft hen de tools en motivatie om zelf verantwoordelijkheid te nemen voor hun ontwikkeling en hun doelen effectiever te bereiken.",
     imgSrc: roc,
     githublink:
       "https://github.com/OsamaElAnzi/Aanvraagformulier-voor-examencommissie",
@@ -19,14 +18,12 @@ const projectData = [
   {
     id: 2,
     title: "Project GeldManagement",
-    text: "Deze applicatie is ontworpen om gebruikers te helpen hun contante geld en financiële doelen bij te houden, zonder toezicht van externe instanties. Naast contant geld zal de app ook ondersteuning bieden voor cryptovaluta, zodat je je wallet kunt beheren en eenvoudig je crypto-tegoeden kunt inzien. Het doel is om een gebruiksvriendelijke tool te bieden waarmee je je financiën beter kunt organiseren. De applicatie wordt voortdurend doorontwikkeld, met plannen voor extra functies en verbeteringen in de toekomst om nog meer controle en inzicht te bieden over jouw geldzaken.",
     imgSrc: money,
     githublink: "https://github.com/OsamaElAnzi/GeldManagmentApp",
   },
   {
     id: 3,
     title: "Project Pinguïn",
-    text: `In samenwerking met vier andere studenten heb ik in een Scrum-verband gewerkt aan het project "Project-Pinguin". We werkten in sprints met duidelijke rolverdeling, wat resulteerde in een succesvolle gezamenlijke oplevering van het product. Dit project bood ons waardevolle ervaring met Agile-methodieken en verbeterde onze vaardigheden in communicatie, samenwerking en probleemoplossing.`,
     imgSrc: pinguin,
     githublink: "https://github.com/OsamaElAnzi/Project_Pinguin_React_Scrum",
   },
@@ -49,13 +46,17 @@ const Projecten = () => {
                 <Card.Body className="d-flex flex-column justify-content-between ">
                   <Col>
                     <Card.Title>{project.title}</Card.Title>
-                    <Card.Text>{project.text}</Card.Text>
+                    <Card.Text></Card.Text>
                   </Col>
                   <Row>
-                    <Col>
+                    <Col className="d-flex flex-row justify-content-around">
                       <a href={project.githublink} >
-                        <img width={40} src={github} className="bg-white rounded-circle border-primary" />
+                        <img width={40} src={github}  />
                       </a>
+                      <a href="">
+                        <img width={40} src={info}  />
+                      </a>
+                      <Link></Link>
                     </Col>
                     <Col></Col>
                   </Row>
