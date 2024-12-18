@@ -46,7 +46,6 @@ const Projecten = () => {
                 <Card.Body className="d-flex flex-column justify-content-between ">
                   <Col>
                     <Card.Title>{project.title}</Card.Title>
-                    <Card.Text></Card.Text>
                   </Col>
                   <Row>
                     <Col className="d-flex flex-row justify-content-around">
@@ -56,9 +55,10 @@ const Projecten = () => {
                       <a href="">
                         <img width={40} src={info}  />
                       </a>
-                      <Link></Link>
+                      <Link to={`/projecten/${project.id}`}>
+                        <img width={40} src={roc}  />
+                      </Link>
                     </Col>
-                    <Col></Col>
                   </Row>
                 </Card.Body>
               </Card>

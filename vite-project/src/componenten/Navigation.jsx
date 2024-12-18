@@ -1,48 +1,43 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-
-import logoNav from "../components/img/media/favicon.png";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
 function Navigation() {
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/projecten", label: "Projecten" },
+    { href: "/CV", label: "CV" },
+  ];
+
   return (
-    <div>
-      <Navbar className="bg-body-tertiary" expand="lg">
-        <Container>
-          <Navbar.Brand as={Link} to="/">
-            <img
-              alt="Cloud Nexus"
-              src={logoNav}
-              width={40}
-              height={40}
-              className="d-inline-block align-top"
-            />
-            Cloud Nexus
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-            <Nav>
-              <Nav.Link as={Link} to="/">
-                Home
+    <Navbar className="custom-navbar bg-body-gray" expand="lg">
+      <Container>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav className="me-auto">
+            {navLinks.map((link) => (
+              <Nav.Link
+                key={link.href}
+                href={link.href}
+                aria-label={`Navigate to ${link.label}`}
+              >
+                {link.label}
               </Nav.Link>
-              <Nav.Link as={Link} to="/service">
-                Service
-              </Nav.Link>
-              <Nav.Link as={Link} to="/pricing">
-                Pricing
-              </Nav.Link>
-              <Nav.Link as={Link} to="/about-us">
-                About Us
-              </Nav.Link>
-              <Nav.Link as={Link} to="/contact">
-                Contact
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </div>
+            ))}
+          </Nav>
+          <Navbar.Text>
+            Gemaakt door:
+            <a
+              href="https://www.linkedin.com/in/osama-el-anzi-930207268/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Visit Osama El Anzi's LinkedIn Profile"
+            >
+              {' '}Osama El Anzi
+            </a>
+          </Navbar.Text>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
