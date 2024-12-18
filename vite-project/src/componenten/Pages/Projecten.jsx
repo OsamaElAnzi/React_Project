@@ -52,12 +52,10 @@ const Projecten = () => {
                       <a href={project.githublink} >
                         <img width={40} src={github}  />
                       </a>
+                      {/* UitlegProjecten komt hier */}
                       <a href="">
                         <img width={40} src={info}  />
                       </a>
-                      <Link to={`/projecten/${project.id}`}>
-                        <img width={40} src={roc}  />
-                      </Link>
                     </Col>
                   </Row>
                 </Card.Body>
