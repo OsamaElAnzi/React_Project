@@ -69,9 +69,9 @@ function PackageBg() {
                         number: {
                             density: {
                                 enable: true,
-                                area: 500,
+                                area: 400,
                             },
-                            value: 100,
+                            value: 60,
                         },
                         opacity: {
                             value: 0.5,

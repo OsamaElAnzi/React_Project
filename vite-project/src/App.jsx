@@ -11,15 +11,6 @@ import PackageBg from "./componenten/PackageBg";
 
 const App = () => {
   return (
-    <html>
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Teko:wght@300..700&family=VT323&display=swap');
-        </style>
-      </head>
-      <body>
     <div className="app-container orbitron">
       <PackageBg />
       <BrowserRouter>
@@ -33,19 +24,17 @@ const App = () => {
           </Routes>
           <div className="col">
             <img
-            width={400}
-            height={400}
+              width={400}
+              height={400}
               src={logo}
               alt="Osama Logo"
-              className="logo-img"
+              className="logo-img "
               loading="lazy"
             />
           </div>
         </div>
       </BrowserRouter>
     </div>
-    </body>
-    </html>
   );
 };
 

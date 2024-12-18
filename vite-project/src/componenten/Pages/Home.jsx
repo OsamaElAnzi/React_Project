@@ -8,7 +8,7 @@ function Home() {
     <>
       <Container className="pt-4">
         <Row className="pt-4">
-          <Col className="d-flex justify-content-center flex-column align-items-center  p-3 text-dark  rounded orbitron">
+          <Col className=" d-flex justify-content-center flex-column align-items-center  p-3 text-dark  orbitron">
           <br />
           <br />
           <br />
