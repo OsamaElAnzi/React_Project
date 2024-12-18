@@ -41,11 +41,11 @@ const Projecten = () => {
         <Row key={rowIndex} className="mb-4">
           {row.map((project) => (
             <Col md={4} key={project.id}>
-              <Card className="h-100 bg-dark text-success">
+              <Card className="h-100 bg-dark text-light">
                 <Card.Img variant="top" src={project.imgSrc} />
                 <Card.Body className="d-flex flex-column justify-content-between ">
                   <Col>
-                    <Card.Title>{project.title}</Card.Title>
+                    <Card.Title className="text-center">{project.title}</Card.Title>
                   </Col>
                   <Row>
                     <Col className="d-flex flex-row justify-content-around">

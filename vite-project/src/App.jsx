@@ -33,6 +33,8 @@ const App = () => {
           </Routes>
           <div className="col">
             <img
+            width={400}
+            height={400}
               src={logo}
               alt="Osama Logo"
               className="logo-img"

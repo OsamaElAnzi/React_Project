@@ -9,7 +9,7 @@ function Navigation() {
   ];
 
   return (
-    <Navbar className="custom-navbar bg-body-gray" expand="lg">
+    <Navbar expand="lg">
       <Container>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
