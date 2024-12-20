@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import './Navgation.css';
+import ReactLoading from 'react-loading';
+import './Navigation.css';
 
 function Navigation() {
   const [isLoading, setIsLoading] = useState(false);
@@ -16,17 +17,11 @@ function Navigation() {
     setIsLoading(true);
     setTimeout(() => {
       window.location.href = href;
-    }, 1500);
+    }, 700);
   };
 
   return (
     <>
-      {isLoading && (
-        <div className="loading-screen">
-          <div className="spinner"></div>
-          <p>Loading...</p>
-        </div>
-      )}
       <Navbar expand="lg">
         <Container>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -57,6 +52,16 @@ function Navigation() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      {isLoading && (
+        <div className="loading-overlay">
+          <ReactLoading
+            type="bars"
+            color="#0d47a1"
+            height={100}
+            width={100}
+          />
+        </div>
+      )}
     </>
   );
 }
